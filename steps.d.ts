@@ -4,7 +4,7 @@ type CustomHelper = import('./src/helpers/CustomHelper');
 
 declare namespace CodeceptJS {
   interface SupportObject { I: I, todoPage: todoPage }
-  interface Methods extends Playwright, CustomHelper {}
+  interface Methods extends Puppeteer, CustomHelper {}
   interface I extends WithTranslation<Methods> {}
   namespace Translation {
     interface Actions {}

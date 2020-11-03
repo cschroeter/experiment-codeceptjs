@@ -10,16 +10,14 @@ exports.config = {
   tests: "./src/tests/**_test.ts",
   output: "./output",
   helpers: {
-    Playwright: {
-      url: "http://localhost:3000",
-      show: false,
-      chromium: {
+    Puppeteer: {
+      url: "https://webcamtests.com/",
+      show: true,
+      waitForNavigation: "networkidle0",
+      chrome: {
         args: [
-          "--allow-file-access-from-files",
-          "--disable-translate",
           "--use-fake-ui-for-media-stream",
-          "--use-file-for-fake-audio-capture=/home/cschroeter/Workspace/codeceptjs-ts/audio.wav",
-          "--use-file-for-fake-video-capture=/home/cschroeter/Workspace/codeceptjs-ts/video.mp4",
+          "--use-fake-device-for-media-stream",
         ],
       },
     },
