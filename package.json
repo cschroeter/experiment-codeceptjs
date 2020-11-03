@@ -1,0 +1,16 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "run:tests": "codeceptjs run",
+    "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
+    "def": "codeceptjs def"
+  },
+  "dependencies": {
+    "codeceptjs": "3.0.1",
+    "playwright": "1.5.2",
+    "ts-node": "9.0.0",
+    "typescript": "4.0.5"
+  }
+}
